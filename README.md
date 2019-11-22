@@ -122,7 +122,7 @@
 
 ### γ. Σύγκριση με αλλαγή παραμέτρων (Συχνότητας, Μνήμης)
 
-#### Frequency
+## Frequency
 
 #### MinorCPU
 
@@ -135,8 +135,41 @@
 |    sim_insts   |    11,517   |    11,517   |           -          |
 |   sim_seconds  |   0.000041  |   0.000033  |       (seconds)      |
 
+#### TimingSimpleCPU
+
+|    Parameter   |      1GHz     |      2GHz     |         Units        |
+|:--------------:|:-------------:|:-------------:|:--------------------:|
+| host_inst_rate |    698,218    |    662,492    | (Instructions / sec) |
+|  host_op_rate  |    820,565    |    778,805    |  (Operations / sec)  |
+|  host_seconds  |      0.02     |      0.02     |       (seconds)      |
+| host_tick_rate | 3,518,114,694 | 2,311,165,883 |     (Ticks / sec)    |
+|    sim_insts   |     11,460    |     11,460    |           -          |
+|   sim_seconds  |    0.000058   |    0.000040   |       (seconds)      |
+
 Παρατηρούμε ότι όταν η συχνότητα ρολογιού του επεξεργαστή αυξάνεται (2GHz > 1GHz), αυξάνεται ο αριθμός των εντολών που μπορεί να τρέχει ανά μονάδα χρόνου και επομένως το πρόγραμμα εκτελείται με μεγαλύτερη ταχύτητα. Για αυτό το λόγο και ο χρόνος προσομοίωσης είναι μικρότερος για τα 2GHz.
 
-##### Memory Type
+## Memory Type
+
+#### MinorCPU
+
+|    Parameter   |   DDR32133  | DDR42400416 |         Units        |
+|:--------------:|:-----------:|:-----------:|:--------------------:|
+| host_inst_rate |   206,822   |   202,697   | (Instructions / sec) |
+|  host_op_rate  |   245,354   |   240,434   |  (Operations / sec)  |
+|  host_seconds  |     0.06    |     0.06    |       (seconds)      |
+| host_tick_rate | 558,262,502 | 577,195,923 |     (Ticks / sec)    |
+|    sim_insts   |    11,517   |    11,517   |           -          |
+|   sim_seconds  |   0.000031  |   0.000033  |       (seconds)      |
+
+#### TimingSimpleCPU
+
+|    Parameter   |    DDR32133   |  DDR42400416  |         Units        |
+|:--------------:|:-------------:|:-------------:|:--------------------:|
+| host_inst_rate |    646,721    |    619,259    | (Instructions / sec) |
+|  host_op_rate  |    760,367    |    728,341    |  (Operations / sec)  |
+|  host_seconds  |      0.02     |      0.02     |       (seconds)      |
+| host_tick_rate | 2,204,488,737 | 2,197,820,747 |     (Ticks / sec)    |
+|    sim_insts   |     11,460    |     11,460    |           -          |
+|   sim_seconds  |    0.000039   |    0.000041   |       (seconds)      |
 
 
