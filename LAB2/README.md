@@ -89,4 +89,6 @@
 
 Στις προσπάθειες μας για την εύρεση μια συνάρτησης κόστους χρησιμοποιήσαμε τις παραμέτρους CPI το οποίο θέλουμε να προσεγγίζει την μονάδα , το μέγεθος των L1d, L1i ,L2 καθώς και τα associativity των μνημών.
 
-function=fraq{100*cpi}*{25*L1i+25*L1d+10*l1i_asscociativity +10*L1d_associativity+25*L2+5*L2_associativity}
+```latex
+function=\fraq{100*cpi}{25*L1i+25*L1d+10*l1i_asscociativity +10*L1d_associativity+25*L2+5*L2_associativity}
+```
