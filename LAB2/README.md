@@ -128,12 +128,18 @@ L2 cache associativity
 
 Παρακάτω παρατίθονται οί πίνακες με τα αποτελέσματα για τα benchmarks.
 1)speclibm
+
 ![](speclibm.png)
+
 2)specbzip
+
 ![](specbzip.png)
-3)spechammer
-![](spechammer.png)
+3)spechmmer
+
+![](spechmmer.png)
+
 4)specmcf
+
 ![](specmcf.png)
 
 ### Ερωτήματα τρίτου  βήματος.
