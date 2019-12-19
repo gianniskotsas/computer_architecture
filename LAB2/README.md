@@ -129,7 +129,7 @@ L2 cache associativity
 Παρακάτω παρατίθονται οί πίνακες με τα αποτελέσματα για τα benchmarks.
 1)speclibm
 
-![](speclibm.png)
+![](speclibm1.png)
 
 2)specbzip
 
