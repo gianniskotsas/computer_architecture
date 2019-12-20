@@ -147,13 +147,33 @@ L2 cache associativity
 Απο τους παραπάνω πίνακες μπορούμε να εντοπίσουμε τους συνδιασμούς που βελτιοστοποιούν το κάθε benchmark. Ενδιαφέρον είναι το γεγονός οτι το κάθε benchmark πετυχαίνει το μικρότερο δυνατο cpi για διαφορετικούς συνδιασμούς παραμέτρων. Έτσι για το benchmark speclibm παρατηρούμε οτι ο συνδιασμός που πετυχαίνει το βέλτιστο cpi είναι ο συνδιασμός 20 (l1d_size=128kB 	l1i_size=128kB 	l2_size=512kB 	l1i_associativity=8 	lid_associativity=8 	l2_associativity=8 	cachelize_size=256), για το benchmark specbzip είναι ο συνδιασμός 15 (l1d_size=128kB 	l1i_size=128kB 	l2_size=2048kB 	l1i_associativity=8 	lid_associativity=8 	l2_associativity=8 	cachelize_size=64), για το benchmark spechmmer ο συνδιασμός 20 με στοιχεία (l1d_size=128kB 	l1i_size=128kB 	l2_size=512kB 	l1i_associativity=8 	lid_associativity=8 	l2_associativity=8 	cachelize_size=256) ενώ τέλος για το benchmark specmcf ο συνδιασμος 2 και ο συνδιασμός 23 δίνουν ακριβώς το ίδιο cpi το οποίο τυχαίνει να είναι το μικρότερο δυνατό που παρατηρήθηκε σε όλα τα πειράματα με τιμη cpi=1.10
 
 Στα πειράματα που τρέξαμε αλλάζουμε τις τιμές των παραμέτρων ταυτόχρονα και συνεπώς δεν μπορούμε να παρατηρήσουμε τι αποτελέσματα επιφέρει η κάθε μεταβλητή ξεχωριστά. Οπότε τρέξαμε κάποια επιπρόσθετα πειράματα μόνο για το speclibm στα οποία αλλάζουμε μόνο μια παράμετρο την φορά. Οι εντολές που τρέξαμε φαίνονται στο αρχείο με όνομα speclibm.sh. 
-![](speclibm1.png)
-![](speclibm1.png)
-![](speclibm1.png)
-![](speclibm1.png)
-![](speclibm1.png)
-![](speclibm1.png)
-![](speclibm1.png)
+1)Πρώτη παράμετρος που ελέγχουμε είναι η l1i_size και παίρνει τιμές 32,64,128 αντίστοιχα. Οι υπόλοιπες παράμετροι έχουν τιμές
+ --l1d_size=32kB  --l2_size=512kB --l1i_assoc=1 --l1d_assoc=1 --l2_assoc=2 --cacheline_size=64
+ 
+![](l1i_change.jpg)
+
+2)Δεύτερη παράμετρος που ελέγχουμε είναι η lid_size και παίρνει τιμές 32,64,128
+--l1i_size=32kB --l2_size=512kB --l1i_assoc=1 --l1d_assoc=1 --l2_assoc=2 --cacheline_size=64
+
+![](Results_libm2_l1dchange.jpg)
+
+3)Τρίτη παράμετρος που πειράξαμε ήταν η l2_size που τις  δώσαμε τιμές 512 1024 2048 4096 ενώ οι υπολοιπες παράμετροι είχαν τιμές  --l1i_size=64kB --l1d_size=32kB  --l1i_assoc=1 --l1d_assoc=1 --l2_assoc=2 --cacheline_size=64
+
+![](Results_libm2_l2change.jpg)
+
+4)Τέταρτη παράμετρος ήταν το l1i_associativity και παίρνει τιμές 1 2 4 8.Οι υπόλοιπες παράμετροι είχαν τιμές --l1d_size=32kB --l1i_size=64kB --l2_size=512kB --l1d_assoc=1 --l2_assoc=2 --cacheline_size=64 
+
+![](Results_libm2_l1iassoc.jpg)
+
+5)Πέμπτη παράμετρος ήταν το l1d_associativity και παίρνει τιμές 1 2 4 8.Οι υπόλοιπες παράμετροι είχαν τιμές --l1d_size=32kB --l1i_size=64kB --l2_size=512kB --l1i_assoc=1 --l2_assoc=2 --cacheline_size=64 
+
+![](Results_libm2_l1dassoc.jpg)
+
+6)Έκτη παράμετρος ήταν το l2_associativity και παίρνει τιμές 1 2 4 8. Οι υπόλοιπες παράμετροι είχαν τιμές --l1d_size=32kB --l1i_size=64kB --l2_size=512kB --l1i_assoc=1 --l1d_assoc=1  --cacheline_size=64 
+![](Results_libm2_l2assocc.jpg)
+
+7)Τελευταία παράμετρος είναι η cacheline_size με τιμες απο 64 , 128 , 256 ,512, 1024 , 2048.  Οι υπόλοιπες παράμετροι είχαν τιμές --l1d_size=32kB --l1i_size=64kB --l2_size=512kB --l1i_assoc=1 --l1d_assoc=1  --l2_assoc=2 
+![](Results_libm2_ cacheline.jpg)
 
 
 ### Ερωτήματα τρίτου  βήματος.
