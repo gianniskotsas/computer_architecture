@@ -173,7 +173,7 @@ L2 cache associativity
 ![](Results_libm2_l2assocc.jpg)
 
 7)Τελευταία παράμετρος είναι η cacheline_size με τιμες απο 64 , 128 , 256 ,512, 1024 , 2048.  Οι υπόλοιπες παράμετροι είχαν τιμές --l1d_size=32kB --l1i_size=64kB --l2_size=512kB --l1i_assoc=1 --l1d_assoc=1  --l2_assoc=2 
-![](Results_libm2_ cacheline.jpg)
+![](Results_libm2_cacheline.jpg)
 
 
 ### Ερωτήματα τρίτου  βήματος.
