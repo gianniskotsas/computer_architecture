@@ -1,0 +1,4 @@
+Reading simulation time from: /home/poseidon/my_gem5/mcpat_speczip/txt_results/speczip5.txt
+Reading simulation time from: /home/poseidon/my_gem5/speczip_results/specbzip1/stats.txt
+leakage: 2.117430 W, dynamic: 0.409053 W and runtime: 0.091301 sec
+energy is 230.670424 mJ
