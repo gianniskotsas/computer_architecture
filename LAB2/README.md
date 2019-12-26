@@ -48,7 +48,7 @@
 
 Για το benchmark specsjeng συναντίσαμε πρόβλημα. Καθως και στους 3 υπολογιστές που διαθέτουμε σαν ομάδα η προσομοίωση δεν έτρεχε και έβγαζε το εξής error :   Error: script doesn't take any positional arguments
 
-####Γρφήματα
+
 ![](SimSeconds.jpg)
 
 ![](CPI.jpg)
